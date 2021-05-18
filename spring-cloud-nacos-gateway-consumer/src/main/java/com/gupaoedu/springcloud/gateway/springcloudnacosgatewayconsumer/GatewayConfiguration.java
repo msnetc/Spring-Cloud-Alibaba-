@@ -46,11 +46,15 @@ public class GatewayConfiguration {
     public GlobalFilter sentinelGatewayFilter(){
         return new SentinelGatewayFilter();
     }
+
+
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public GpSentinelGatewayBlockExceptionHandler sentinelGatewayBlockExceptionHandler(){
         return new GpSentinelGatewayBlockExceptionHandler(viewResolvers,serverCodecConfigurer);
     }
+
+
     @PostConstruct
     public void doInit(){
         initGatewayRules();

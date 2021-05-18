@@ -5,4 +5,4 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 192.168.216.128:7777
+        dashboard: 192.168.0.243:8858
